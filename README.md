@@ -14,6 +14,7 @@ We built ScalpCV mainly for a simple way for us to combat midnight releases of p
 # Stretch goals:
 - Run recursively and automatically
 - Docker containerization
+- Multiple instances managed in the same container
 - Load a browser that isn't chromium (lighter on resources)
 - Web interface
 - Home assistant integration

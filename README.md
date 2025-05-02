@@ -1,2 +1,23 @@
 # ScalpCV
-A scalping bot utilizing Playwright &amp; OpenCV to maintain consistency across websites, slow and steady scalps the web
+A scalping bot utilizing OpenCV to maintain consistency across websites, slow and steady scalps the web
+
+This was/is a school project designed by a trio of nerds in the span of about a week of work time to be an incredibly basic scalping bot
+
+We built ScalpCV mainly for a simple way for us to combat midnight releases of products that go out of stock hella fast like the Switch 2 pre-orders (we wanna sleep, not spam refresh)
+
+# TO DO:
+- SSD detection for cart and bag icons
+- Make TUI
+- Comment code -.-
+- Integrate email to openCV build
+
+# Stretch goals:
+- Run recursively and automatically
+- Docker containerization
+- Load a browser that isn't chromium (lighter on resources)
+- Web interface
+- Home assistant integration
+- Secure automated payment
+- Configure when to run depending on time
+- Refreshing pages for midnight drops
+- Have Harsh contribute something

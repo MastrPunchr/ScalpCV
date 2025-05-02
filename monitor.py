@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 import time
 
 # Common phrases to detect stock status
-IN_STOCK_KEYWORDS = ['add to cart', 'buy now', 'in stock', 'order now']
+IN_STOCK_KEYWORDS = ['add to cart', 'buy now', 'in stock', 'order now', 'add', 'add now', 'add item']
 OUT_OF_STOCK_KEYWORDS = ['out of stock', 'sold out', 'unavailable', 'not available', 'notify me']
 
 def log_to_file(text):
@@ -72,7 +72,7 @@ def check_availability(url, log_callback=print):
 
             in_stock = False
 
-            # Check all buttons
+            # Check all buttons for "Add to Cart" and related keywords
             buttons = page.locator("button")
             for i in range(buttons.count()):
                 try:
@@ -135,7 +135,8 @@ def add_to_cart(url):
             try:
                 button = buttons.nth(i)
                 text = button.text_content().strip().lower()
-                if 'add to cart' in text and button.is_visible() and button.is_enabled():
+                # Check for "Add To Cart" or any related keywords
+                if any(keyword in text for keyword in IN_STOCK_KEYWORDS) and button.is_visible() and button.is_enabled():
                     button.click()
                     print("🛒 'Add to Cart' clicked.")
                     break

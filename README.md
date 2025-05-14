@@ -6,16 +6,14 @@ This was/is a school project designed by a trio of nerds in the span of about a 
 We built ScalpCV mainly for a simple way for us to combat midnight releases of products that go out of stock hella fast like the Switch 2 pre-orders (we wanna sleep, not spam refresh)
 
 # TO DO:
-- SSD detection for cart and bag icons
-- Make TUI
-- Comment code -.-
+- Properly comment code -.-
 - Integrate email to openCV build
 
 # Stretch goals:
 - Run recursively and automatically
 - Docker containerization
 - Multiple instances managed in the same container
-- Load a browser that isn't chromium (lighter on resources)
+- Use unGoogled chromium for browser
 - Web interface
 - Home assistant integration
 - Secure automated payment
